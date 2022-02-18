@@ -39,8 +39,8 @@ click on [KEYS]</br>
 click on [ADD KEY] Create new key</br>
 select JSON as key type</br>
 click on CREATE</br>
-save that key file (ending with .json) on your computer, it will need to be copied to this application folder once installed from this repository</br>
-that key file name is the value, e.g. *VonageDFCX-05768e59b7c5.json*,  
+save that key file (ending with .json) on your computer and add a leading dot to the filename (e.g. .xxxx.json), it will need to be copied to this application folder once installed from this repository</br>
+that key file name is the value, e.g. *.VonageDFCX-05768e59b7c5.json*,  
 we will use that value to set the parameter **GOOGLE_APPLICATION_CREDENTIALS** in the next sections.</br></br>
 
 - To retrieve the Dialogflow CX agent location:</br>
@@ -61,7 +61,7 @@ You deploy the Dialogflow reference connection code in one of the following coup
 
 ### Local deployment
 
-To run your own instance of this sample application locally, you'll need an up-to-date version of Node.js (we tested with version 14.3.0).
+To run your own instance of this sample application locally, you'll need an up-to-date version of Node.js (we tested with version 14.18).
 
 Download this sample application code to a local folder, then go to that folder.
 
@@ -72,7 +72,7 @@ cp .env.example .env
 
 Edit `.env` file, and set the first 4 parameter values:</br>
 GCLOUD_PROJECT_ID=xxxxxx </br>
-GOOGLE_APPLICATION_CREDENTIALS=xxxxxxxxxxxxxxx.json</br>
+GOOGLE_APPLICATION_CREDENTIALS=.xxxxxxxxxxxxxxx.json</br>
 DF_AGENT_LOCATION=xxxxxx<br>
 DF_AGENT_ID=xxxxxxxxx<br>
 DF_LANGUAGE=en<br>

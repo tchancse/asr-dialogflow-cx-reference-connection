@@ -21,21 +21,6 @@ const reqHeaders = {
     'Accept': 'application/json'
 };
 
-//------------
-
-// this is used with the heroku one-click install.
-// if you are running locally, use GOOGLE_APPLICATION_CREDENTIALS to point to the file location
-// let config = null;
-// if (process.env.GOOGLE_APPLICATION_CREDENTIALS === undefined) {
-//   config = {
-//     projectId: 'nexmo-extend',
-//     credentials: {
-//       client_email: process.env.GOOGLE_CLIENT_EMAIL,
-//       private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n')
-//     }
-//   }
-// }
-
 //-- Google Speech-to-Text
 const speech = require('@google-cloud/speech');
 
@@ -89,8 +74,6 @@ async function detectIntentText(query, uuid, webhookUrl, dfSessionPath, dfClient
     }
   };
   
-  // const [response] = await client.detectIntent(request);
-
   let [response] = [];
   
   try {
