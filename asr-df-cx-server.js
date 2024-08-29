@@ -140,10 +140,14 @@ async function detectIntentText(query, uuid, webhookUrl, dfSessionPath, dfClient
         console.log("Sending back audio bytes:", response.outputAudio.byteLength);
         const replyAudio = response.outputAudio;
 
-        const frames = replyAudio.length / 640;
-        let pos = 0;
+        
+        // remove WAV header (44 bytes)
+        const frames = (replyAudio.length - 44) / 640;
+        let pos = 44;
+        
         const timerIds = [];
         
+        // play Dialogflow audio through the WebSocket
         for (let i = 0; i < frames + 1; i++) {
           const newpos = pos + 640;
           const data = replyAudio.slice(pos, newpos);
@@ -266,5 +270,5 @@ app.ws('/socket', async (ws, req) => {
 
 //-------------
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 6000;
 app.listen(port, () => console.log(`Connecting server application listening on port ${port}!`))
