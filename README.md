@@ -4,7 +4,7 @@ You can use this STT/Dialogflow CX reference connection code to connect a Vonage
 
 ## About this reference connection code
 
-STT/Dialogflow CX reference connection makes use of the [WebSockets feature](https://docs.nexmo.com/voice/voice-api/websockets) of Vonage Voice API. When a voice call is established, a Voice API application triggers a WebSocket connection to this Dialogflow reference connection and streams the audio to and from the voice call in real time.
+STT/Dialogflow CX reference connection makes use of the [WebSockets feature](https://developer.vonage.com/en/voice/voice-api/concepts/websockets) of Vonage Voice API. When a voice call is established, a Voice API application triggers a WebSocket connection to this Dialogflow reference connection and streams the audio to and from the voice call in real time.
 
 See https://github.com/nexmo-se/asr-dialogflow-cx-sample-voice-application for a **sample Voice API application** using this reference connection code to connect voice calls to a DF CX agent.
 
@@ -60,6 +60,20 @@ we will use that value to set the parameter **DF_AGENT_ID** in the next sections
 You deploy the Dialogflow reference connection code in one of the following couple of ways.
 
 ### Local deployment
+
+#### Ngrok
+
+[Download and install ngrok](https://ngrok.com/download), an Internet tunelling service.</br>
+Sign in or sign up with [ngrok](https://ngrok.com/), from the menu, follow the **Setup and Installation** guide.
+
+Set up a domain to forward to the local port 6000 (as this server application will be listening on port 6000).
+
+Start ngrok to listen on port 6000,</br>
+please take note of the ngrok **Enpoint URL** as it is needed when setting up the corresponding sample server application using Vonage Voice API,
+that URL looks like:</br>
+`https://yyyyyyyy.ngrok.io`
+
+#### Node.js - Application
 
 To run your own instance of this sample application locally, you'll need Node.js (we tested with version 18.19).
 
