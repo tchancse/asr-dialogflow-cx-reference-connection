@@ -69,7 +69,7 @@ Sign in or sign up with [ngrok](https://ngrok.com/), from the menu, follow the *
 Set up a domain to forward to the local port 6000 (as this server application will be listening on port 6000).
 
 Start ngrok to listen on port 6000,</br>
-please take note of the ngrok **Enpoint URL** as it is needed when setting up the corresponding sample server application using Vonage Voice API,
+please take note of the ngrok **Enpoint URL** as it is needed when setting up the corresponding [sample server application](https://github.com/nexmo-se/asr-dialogflow-cx-sample-voice-application) using Vonage Voice API,
 that URL looks like:</br>
 `https://yyyyyyyy.ngrok.io`
 
