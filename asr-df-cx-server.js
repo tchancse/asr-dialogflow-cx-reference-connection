@@ -8,7 +8,7 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const app = express();
 const expressWs = require('express-ws')(app);
-const { Readable } = require('stream');
+// const { Readable } = require('stream');
 
 app.use(bodyParser.json());
 
@@ -128,6 +128,7 @@ async function detectIntentText(query, uuid, webhookUrl, dfSessionPath, dfClient
     try {
       
       const timerIds = app.get(`playtimers_${uuid}`) || [];
+      
       for (const timerId of timerIds) {
         clearTimeout(timerId);
       };
